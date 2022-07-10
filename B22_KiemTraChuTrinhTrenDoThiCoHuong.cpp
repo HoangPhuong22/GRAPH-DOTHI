@@ -9,13 +9,14 @@ bool DFS(int s)
     color[s] = 1;
     for(int x : v[s])
     {
-        if(!ok[x])
+        if(!color[x])
         {
             if(DFS(x)) return true;
         }
         else if(color[x] == 1) return true;
     }
     color[s] = 2;
+    return false;
 }
 
 int main()
@@ -28,9 +29,9 @@ int main()
     }
     for(int i = 1 ; i <= n ;i++)
     {
-        if(!ok[i])
+        if(color[i] == 0)
         {
-            if(DFS(i , 0))
+            if(DFS(i))
             {
                 cout << 1;
                 return 0;
