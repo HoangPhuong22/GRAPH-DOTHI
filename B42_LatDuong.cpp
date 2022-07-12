@@ -1,13 +1,13 @@
 #include <bits/stdc++.h>
 using namespace std;
 typedef long long ll;
-const int maxn = 2e5 + 1;
+const int maxn = 1e5 + 1;
 struct canh
 {
     int x , y , w ;
 };
 vector<canh>v;
-int res = 0;
+int res = 1;
 int size[maxn] , parent[maxn];
 
 int find(int u)
@@ -29,6 +29,7 @@ bool Union(int a , int b)
 
 int main()
 {
+    ios::sync_with_stdio(NULL);cout.tie(NULL);cin.tie(NULL);
     int n , m ; cin >> n >> m;
     for(int i = 1 ; i <= n ; i++)
     {
