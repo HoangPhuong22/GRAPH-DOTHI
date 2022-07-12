@@ -8,7 +8,7 @@ void dijkstra(int n , int m)
     int dx[] = {1 , -1 , 0 , 0};
     int dy[] = {0 , 0 , -1 , 1};
     priority_queue<pair<int,pair<int,int>> , vector<pair<int,pair<int,int>>> , greater<pair<int,pair<int,int>>>>Q;
-    Q.push({0 , make_pair(1 , 1)});
+    Q.push({a[1][1] , make_pair(1 , 1)});
     d[1][1] = a[1][1];
     while(!Q.empty())
     {
